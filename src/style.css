@@ -1,0 +1,52 @@
+#first_screen {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 212, 161);
+    height: 100vh;
+}
+#first_screen .logo {
+    width: 200px;
+    height: 80px;
+    background-color: cornflowerblue;
+} 
+#first_screen .arrow {
+    width: 50px;
+    height: 50px;
+    background-color: cornflowerblue;
+} 
+#first_screen .content-wrapper {
+    display: flex;
+    height: 90vh;
+}
+#first_screen .content-wrapper .left-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#first_screen .arrow-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#second_screen {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(193, 161, 253);
+    height: 100vh;
+}
+#second_screen .arrow-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    #first_screen .content-wrapper .left-side {
+        width: 100%;
+    }
+}
+
