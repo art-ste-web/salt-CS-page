@@ -155,7 +155,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    min-height: 760px;
+    min-height: 700px;
     position: relative;
 }
 .second-screen .top-gradient {
@@ -185,8 +185,7 @@ button:hover {
 }
 
 .second-screen .content-wrapper .left-col {
-    width: 50%;
-    
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -237,7 +236,7 @@ button:hover {
     background: url(img/mono-cr.jpg);
     background-size: cover;
     background-position: left;
-    width: 50%;
+    width: 40%;
 }
 .second-screen .contacts-wrapper {
     position: absolute;
