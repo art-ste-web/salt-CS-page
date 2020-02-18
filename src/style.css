@@ -275,8 +275,8 @@ html {
 
 
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 460px) {
+/* <480px, portrait */
+@media (max-width: 480px), screen and (orientation: portrait) {
     .first-screen {
         background: #0f0f0f;
         min-height: 100vh;
@@ -345,4 +345,72 @@ html {
 
     }
 }
+/* <480px, landscape */
+@media (max-width: 480px), screen and (orientation: landscape) {
+    .first-screen {
+        background: #0f0f0f;
+        min-height: 100vh;
+        height: auto;
+    }
+    .first-screen .logo {
+        width: 220px;
+        z-index: 100;
+    } 
+    .first-screen .content-wrapper .left-col {
+        background: none;
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    .first-screen .content-wrapper .left-col .gradient {
+        display: none;
+    }
+    
+    .first-screen .content-wrapper .left-col h1 {
+        font-size: 2.8rem;
+        margin: .5rem;
+    }
+    .first-screen .content-wrapper .left-col button, .second-screen .content-wrapper .left-col button {
+        width: 14rem;
+        min-height: 3rem;
+        font-size: 1.1rem;
+    }
+    .first-screen .content-wrapper .right-col {
+        display: none;
+    }   
+    .first-screen .contacts-wrapper {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0;
+    }
+    .first-screen .contacts-wrapper .contact-container {
+        z-index: 100;
+        padding-left: 10%;
+        padding-top: 1rem;
+    }
+    .first-screen .contacts-wrapper .contact-container span {
+        line-height: 1;
+    }
+    .second-screen {
+        height: auto;
+    }
+    .second-screen .content-wrapper {
+        height: auto;
+    }
+    .second-screen .content-wrapper .left-col {
+        width: 100%;
+        padding: 1rem;
+        padding-bottom: 4rem;
+        background-color: #0f0f0f;
+    }
+    .second-screen .content-wrapper .right-col {
+        display: none;
+    }   
+    .second-screen .content-wrapper .left-col .to-top-btn {
+        bottom: .5rem;
+        left: 80%;
 
+    }
+}
