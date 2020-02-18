@@ -3,19 +3,20 @@
 html {
     cursor: default;
 }
+
+
+/*first screen*/
+
+
 .first-screen {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    min-height: 700px;
 }
 .first-screen .logo {
     width: 280px;
     z-index: 100;
-} 
-.first-screen .arrow {
-    width: 50px;
-    height: 50px;
-    background-color: cornflowerblue;
 } 
 .first-screen .content-wrapper {
     display: flex;
@@ -28,7 +29,7 @@ html {
     top: 0;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0.89) 70%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0.89) 50%,rgba(0,0,0,0) 100%);
     z-index: 0;
 }
 
@@ -59,7 +60,7 @@ html {
     margin-bottom: 10%;
     margin-top: 7%;
 }
-.first-screen .content-wrapper .left-col button {
+.first-screen .content-wrapper .left-col button, .second-screen .content-wrapper .left-col button {
     width: 18rem;
     min-height: 3.6rem;
     border-radius: 5px;
@@ -101,7 +102,7 @@ html {
     flex-direction: row;
     padding: 1rem;
     padding-top: 2rem;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.49) 30%,rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.49) 30%,rgba(0,0,0,1) 100%);
 }
 .first-screen .contacts-wrapper .contact-container {
     display: flex;
@@ -110,6 +111,7 @@ html {
     text-decoration: none;
     color: #e7e7e7;
 }
+
 .first-screen .contacts-wrapper .contact-container .contact-icon {
     width: 3rem;
     height: 3rem;
@@ -137,36 +139,210 @@ html {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+
+/*second screen*/
+
+.second-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 760px;
+    position: relative;
+}
+.second-screen .top-gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    padding: 1rem;
+    padding-top: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.49) 30%,rgba(0,0,0,1) 100%);
+    z-index: 100;
+}
+.second-screen .content-wrapper {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+.second-screen .content-wrapper .left-col .gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0.89) 50%,rgba(0,0,0,0) 100%);
+    z-index: 0;
+}
+
+.second-screen .content-wrapper .left-col {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 2%;
+    background-color: #050505;
+}
+.second-screen .content-wrapper .left-col p {
+    color: #e7e7e7;
+    z-index: 100;
+    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+}
+.second-screen .content-wrapper .left-col .download-btn {
+    background-color: #859cab;
+    color: #fff;
+    border: none;
+    align-self: center;
+    margin-top: 1rem;
+    z-index: 100;
+}
+.second-screen .content-wrapper .left-col .to-top-btn {
+    position: absolute;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    bottom: 2rem;
+    left: 2rem;
+    background: url(img/up-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 100;
+}
+
+.second-screen .content-wrapper .right-col {
+    background: url(img/mono-cr.jpg);
+    background-size: cover;
+    background-position: left;
+    width: 50%;
+}
+.second-screen .contacts-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1rem;
+    padding-top: 2rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.49) 30%,rgba(0,0,0,0.7) 100%);
+}
+.second-screen .contacts-wrapper .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #e7e7e7;
+}
+
+.second-screen .contacts-wrapper .contact-container .contact-icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    border: 1px solid #e7e7e7;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-right: .5rem;
+}
+.second-screen .contacts-wrapper .contact-container .email-icon {
+    background: url(img/email-icon.svg);
+    background-size: 1.9rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.second-screen .contacts-wrapper .contact-container .phone-icon {
+    background: url(img/phone-icon.svg);
+    background-size: 1.9rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.second-screen .contacts-wrapper .contact-container .location-icon {
+    background: url(img/location-icon.svg);
+    background-size: 1.9rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 460px) {
     .first-screen {
         background: #0f0f0f;
+        min-height: 100vh;
     }
+    .first-screen .logo {
+        width: 220px;
+        z-index: 100;
+    } 
     .first-screen .content-wrapper .left-col {
         background: none;
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 0;
     }
     .first-screen .content-wrapper .left-col .gradient {
         display: none;
     }
-    .first-screen .content-wrapper .left-col {
-        width: 100%;
-        padding-left: 0;
-    }
+    
     .first-screen .content-wrapper .left-col h1 {
-        padding: 1rem;
+        font-size: 2.8rem;
+        margin: .5rem;
+    }
+    .first-screen .content-wrapper .left-col button, .second-screen .content-wrapper .left-col button {
+        width: 14rem;
+        min-height: 3rem;
+        font-size: 1.1rem;
     }
     .first-screen .content-wrapper .right-col {
         display: none;
     }   
     .first-screen .contacts-wrapper {
         position: static;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        background: #0f0f0f;
+        padding-top: 0;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
         padding-left: 10%;
+        padding-top: 1rem;
+    }
+    .first-screen .contacts-wrapper .contact-container span {
+        line-height: 1;
+    }
+    .second-screen {
+        height: auto;
+    }
+    .second-screen .content-wrapper {
+        height: auto;
+    }
+    .second-screen .content-wrapper .left-col {
+        width: 100%;
+        padding: 1rem;
+        padding-bottom: 4rem;
+        background-color: #0f0f0f;
+
+        
+    }
+    .second-screen .content-wrapper .right-col {
+        display: none;
+    }   
+    .second-screen .content-wrapper .left-col .to-top-btn {
+        bottom: .5rem;
+        left: 80%;
+
     }
 }
 
