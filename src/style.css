@@ -3,8 +3,17 @@
 html {
     cursor: default;
 }
-
-
+button {
+    transform: scale(1);
+    transition: transform ease-in .2s;
+}
+button:focus {
+    outline:0;
+}
+button:hover {
+    transform: scale(1.07);
+    transition: transform ease-in .2s;
+}
 /*first screen*/
 
 
@@ -100,8 +109,7 @@ html {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 1rem;
-    padding-top: 2rem;
+    padding: 2rem 3rem 1rem 3rem;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.49) 30%,rgba(0,0,0,1) 100%);
 }
 .first-screen .contacts-wrapper .contact-container {
@@ -217,6 +225,12 @@ html {
     background-position: center center;
     cursor: pointer;
     z-index: 100;
+    transform: translateY(0);
+    transition: transform ease-in 0.2s;
+}
+.second-screen .content-wrapper .left-col .to-top-btn:hover {
+    transform: translateY(-7px);
+    transition: transform ease-in 0.2s;
 }
 
 .second-screen .content-wrapper .right-col {
