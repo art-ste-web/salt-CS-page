@@ -143,8 +143,17 @@ html {
         background: #0f0f0f;
     }
     .first-screen .content-wrapper .left-col {
+        background: none;
+    }
+    .first-screen .content-wrapper .left-col .gradient {
+        display: none;
+    }
+    .first-screen .content-wrapper .left-col {
         width: 100%;
         padding-left: 0;
+    }
+    .first-screen .content-wrapper .left-col h1 {
+        padding: 1rem;
     }
     .first-screen .content-wrapper .right-col {
         display: none;
@@ -153,10 +162,11 @@ html {
         position: static;
         flex-direction: column;
         align-items: flex-start;
+        background: #0f0f0f;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
-        padding-left: 20%;
+        padding-left: 10%;
     }
 }
 
