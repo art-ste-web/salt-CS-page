@@ -30,3 +30,13 @@ aboutBtn.addEventListener('click', () => {
 upBtn.addEventListener('click', () => {
   scrollTo(mainPage);
 });
+
+
+/*hide preloader*/  
+const pre = document.querySelector('.preloader');
+window.onload = hidePre;
+
+ function hidePre() {
+   pre.classList.add('hide');
+   document.body.style.overflow = "visible";
+ }

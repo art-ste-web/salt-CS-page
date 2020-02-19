@@ -16,6 +16,56 @@ button:hover {
     transform: scale(1.07);
     transition: transform ease-in .2s;
 }
+body {
+    overflow: hidden;
+}
+/*preloader styles*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    z-index: 1000;
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.lds-circle {
+    display: inline-block;
+    transform: translateZ(1px);
+  }
+  .lds-circle > div {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background: #fff;
+    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  @keyframes lds-circle {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    }
+  }
+
+
+
+.hide {
+    display: none;
+}
 /*first screen*/
 
 
@@ -23,7 +73,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    min-height: 700px;
     min-width: 320px;
 }
 .first-screen .logo {
@@ -292,12 +341,11 @@ button:hover {
 }
 
 
-
-/* <480px, portrait */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+/****smarts****/
+/*width from 320px to 1024px, height more than 600px (smarts portrait)*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
     .first-screen {
         background: #0f0f0f;
-        min-height: 100vh;
         min-width: 320px;
     }
     .first-screen .logo {
@@ -353,7 +401,9 @@ button:hover {
     }
     .second-screen {
         height: auto;
-        
+    }
+    .second-screen .top-gradient {
+        display: none;
     }
     .second-screen .content-wrapper {
         height: auto;
@@ -377,6 +427,7 @@ button:hover {
 
     }
 }
+/*width from 320px to 480px, height less than 600px (old smarts, iphone4 )*/
 @media only screen and (min-width: 320px) and (max-width: 480px) and (max-height: 600px) {
     .first-screen .logo {
         width: 160px;
@@ -402,5 +453,111 @@ button:hover {
         height: 2rem;
         font-size: 1rem;
     }
+    .second-screen .content-wrapper .left-col p {
+        font-size: 1rem;
+    }
 }
+/*width from 320px to 1024px, height less than 420px (smarts landscape)*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (max-height: 420px) {
+    .first-screen  {
+        height: auto;
+    }
+    .first-screen .logo {
+        width: 180px;
+        margin-top: 1rem;
+    }
+    .first-screen .content-wrapper .left-col h1 {
+        margin-bottom: 2rem;
+    }
+    .first-screen .contacts-wrapper {
+        margin-top: 2rem;
+    }
+    .first-screen .contacts-wrapper .contact-container {
+        padding-left: 25%;
+        padding-top: 0.5rem;
+    }
 
+    .second-screen .content-wrapper {
+        height: auto;
+    }
+}
+/*tablets*/
+/*width from 600px to 1024px, height more than 768px*/
+@media only screen and (min-width: 600px) and (max-width: 1024px) and (min-height: 768px) {
+    .first-screen .logo {
+        width: 260px;
+    }
+    .first-screen .content-wrapper .left-col h3 {
+        font-size: 1.5rem;
+    }
+    .first-screen .content-wrapper .left-col h1 {
+        font-size: 4rem;
+        
+    }
+    .first-screen .contacts-wrapper .contact-container {
+        padding-left: 3%;
+        padding-top: .5rem;
+    }
+    .first-screen .contacts-wrapper {
+        padding-left: 35%;
+    }
+    .first-screen .contacts-wrapper .contact-container .contact-icon {
+        height: 2.8rem;
+        width: 2.8rem;
+        padding: .5rem;
+    }
+    .first-screen .content-wrapper .left-col button, .second-screen .content-wrapper .left-col button {
+        width: 16rem;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+    .second-screen .content-wrapper .left-col {
+        padding: 0;
+        height: 100vh;
+    }
+    .second-screen .content-wrapper .left-col p {
+        font-size: 1.1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+/*width from 960px to 1024px, height more than 1024px (ipad pro)*/
+@media only screen and (min-width: 960px) and (max-width: 1024px) and (min-height: 1024px) {
+    .first-screen .logo {
+        width: 360px;
+    }
+    .first-screen .content-wrapper .left-col h3 {
+        font-size: 1.5rem;
+    }
+    .first-screen .content-wrapper .left-col h1 {
+        font-size: 6rem;
+        
+    }
+    .first-screen .contacts-wrapper .contact-container {
+        padding-top: .5rem;
+    }
+    .first-screen .contacts-wrapper {
+        flex-direction: row;
+        padding-left: 0%;
+        margin-top: 12rem;
+    }
+    .first-screen .contacts-wrapper .contact-container .contact-icon {
+        height: 2.8rem;
+        width: 2.8rem;
+        padding: .5rem;
+    }
+    .first-screen .content-wrapper .left-col button, .second-screen .content-wrapper .left-col button {
+        width: 20rem;
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+    .second-screen .content-wrapper .left-col {
+        padding: 0;
+        height: 100vh;
+    }
+    .second-screen .content-wrapper .left-col p {
+        font-size: 1.5rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
