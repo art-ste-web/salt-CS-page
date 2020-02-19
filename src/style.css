@@ -207,7 +207,6 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    min-height: 700px;
     min-width: 320px;
     position: relative;
 }
