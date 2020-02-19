@@ -339,13 +339,13 @@ button:hover {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         padding-top: 1rem;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
         padding-left: 10%;
-        padding-top: 0.1rem;
+        padding-top: 0.5rem;
     }
     
     .first-screen .contacts-wrapper .contact-container span {
