@@ -38,8 +38,8 @@ body {
   }
   .lds-circle > div {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 40px;
+    height: 40px;
     margin: 8px;
     border-radius: 50%;
     background: #fff;
@@ -78,6 +78,10 @@ body {
 .first-screen .logo {
     width: 280px;
     z-index: 100;
+    opacity: 1;
+    animation: appear-el;
+    animation-duration: 1s;
+    animation-delay: .2s;
 } 
 .first-screen .content-wrapper {
     display: flex;
@@ -560,3 +564,16 @@ body {
         margin-right: 3rem;
     }
 }
+
+/*animations*/
+@keyframes appear-el {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
