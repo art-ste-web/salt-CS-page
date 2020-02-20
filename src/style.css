@@ -101,7 +101,7 @@
     animation-name: fadeInLeft;
     animation-timing-function: ease-in;
     animation-duration: .5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
   }
   
   .fadeInRight {
@@ -109,7 +109,7 @@
     animation-name: fadeInRight;
     animation-timing-function: ease-in;
     animation-duration: .5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
   }
   .fadeInUp {
     -webkit-animation-name: fadeInUp;
@@ -255,13 +255,13 @@ body {
     background-color: #859cab;
     color: #fff;
     border: none;
-    opacity: 0;
+    opacity: 1;
 }
 .first-screen .content-wrapper .left-col .about-btn {
     background-color: transparent;
     color: #e7e7e7;
     border: 1px solid #e7e7e7;
-    opacity: 0;
+    opacity: 1;
 }
 
 .first-screen .content-wrapper .left-col button img {
@@ -510,7 +510,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 4rem;
-        padding-top: 1rem;
+        margin-top: 1rem;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
