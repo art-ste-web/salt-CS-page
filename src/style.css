@@ -530,6 +530,7 @@ body {
         z-index: 100;
         padding-left: 10%;
         margin-top: 0.5rem;
+        justify-content: space-between;
     }
     
     .first-screen .contacts-wrapper .contact-container span {
