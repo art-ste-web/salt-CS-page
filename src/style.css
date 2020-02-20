@@ -515,7 +515,7 @@ body {
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
         padding-left: 10%;
-        padding-top: 0.5rem;
+        margin-top: 0.5rem;
     }
     
     .first-screen .contacts-wrapper .contact-container span {
