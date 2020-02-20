@@ -111,6 +111,13 @@
     animation-duration: .5s;
     animation-fill-mode: backwards;
   }
+  .fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
+    animation-fill-mode: backwards;
+  }
   .fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
@@ -141,7 +148,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 110vh;
     z-index: 1000;
     background-color: #0f0f0f;
@@ -262,6 +269,7 @@ body {
     color: #e7e7e7;
     border: 1px solid #e7e7e7;
     opacity: 1;
+    
 }
 
 .first-screen .content-wrapper .left-col button img {
@@ -467,6 +475,10 @@ body {
 /****smarts****/
 /*width from 320px to 1024px, height more than 600px (smarts portrait)*/
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    .fadeInRight {
+        
+        animation-fill-mode: forwards;
+      }
     .first-screen {
         background: #0f0f0f;
         min-width: 320px;
@@ -500,6 +512,7 @@ body {
     }
     .first-screen .content-wrapper .left-col .about-btn {
         margin-bottom: 0;
+        opacity: 0;
     }
     .first-screen .content-wrapper .right-col {
         display: none;
