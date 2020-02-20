@@ -39,4 +39,5 @@ window.onload = hidePre;
  function hidePre() {
    pre.classList.add('hide');
    document.body.style.overflow = "visible";
+   document.body.style.overflowX = "hidden";
  }
