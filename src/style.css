@@ -303,6 +303,7 @@ body {
     border-radius: 50%;
     padding: 1rem;
     margin-right: .5rem;
+    margin-top: .1rem;
 }
 .first-screen .contacts-wrapper .contact-container .email-icon {
     background: url(img/email-icon.svg);
