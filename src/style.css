@@ -513,6 +513,9 @@ body {
         min-height: 3rem;
         font-size: 1.1rem;
     }
+    .first-screen .content-wrapper .left-col .download-btn {
+        opacity: 0;
+    }
     .first-screen .content-wrapper .left-col .about-btn {
         margin-bottom: 0;
         opacity: 0;
@@ -529,6 +532,7 @@ body {
         justify-content: space-between;
         margin-bottom: 4rem;
         margin-top: 1rem;
+        min-height: 9rem;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
