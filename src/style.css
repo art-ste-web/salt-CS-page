@@ -532,7 +532,7 @@ body {
         justify-content: space-between;
         margin-bottom: 4rem;
         margin-top: 1rem;
-        min-height: 9rem;
+        
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
