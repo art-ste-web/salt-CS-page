@@ -527,7 +527,7 @@ body {
         align-items: flex-start;
         margin-bottom: 4rem;
         padding-top: 1rem;
-        z-index: 1000;
+        z-index: 800;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
