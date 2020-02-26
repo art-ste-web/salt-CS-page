@@ -477,6 +477,7 @@ body {
         background-size: cover;
         background-position: center;
         box-shadow: inset 3000px 3000px rgba(0,0,0,0.6);
+        position: relative;
     }
     .first-screen .logo {
         width: 200px;
@@ -484,7 +485,6 @@ body {
     } 
     .first-screen .mob-bottom-gradient {
         width: 100%;
-        position: absolute;
         height: 3rem;
         bottom: 0;
         left: 0;
