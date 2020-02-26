@@ -101,7 +101,7 @@
     animation-name: fadeInLeft;
     animation-timing-function: ease-in;
     animation-duration: .5s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
   }
   
   .fadeInRight {
@@ -109,14 +109,7 @@
     animation-name: fadeInRight;
     animation-timing-function: ease-in;
     animation-duration: .5s;
-    animation-fill-mode: backwards;
-  }
-  .fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
-    animation-timing-function: ease-in;
-    animation-duration: .5s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
   }
   .fadeInUp {
     -webkit-animation-name: fadeInUp;
@@ -148,7 +141,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 110vh;
     z-index: 1000;
     background-color: #0f0f0f;
@@ -262,14 +255,13 @@ body {
     background-color: #859cab;
     color: #fff;
     border: none;
-    opacity: 1;
+    opacity: 0;
 }
 .first-screen .content-wrapper .left-col .about-btn {
     background-color: transparent;
     color: #e7e7e7;
     border: 1px solid #e7e7e7;
-    opacity: 1;
-    
+    opacity: 0;
 }
 
 .first-screen .content-wrapper .left-col button img {
@@ -311,7 +303,6 @@ body {
     border-radius: 50%;
     padding: 1rem;
     margin-right: .5rem;
-    margin-top: .1rem;
 }
 .first-screen .contacts-wrapper .contact-container .email-icon {
     background: url(img/email-icon.svg);
@@ -475,13 +466,6 @@ body {
 /****smarts****/
 /*width from 320px to 1024px, height more than 600px (smarts portrait)*/
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
-    .fadeInRight {
-        
-        animation-fill-mode: forwards;
-      }
-      .fadeInLeft {
-          animation-fill-mode: forwards;
-      }
     .first-screen {
         background: #0f0f0f;
         min-width: 320px;
@@ -513,12 +497,8 @@ body {
         min-height: 3rem;
         font-size: 1.1rem;
     }
-    .first-screen .content-wrapper .left-col .download-btn {
-        opacity: 0;
-    }
     .first-screen .content-wrapper .left-col .about-btn {
         margin-bottom: 0;
-        opacity: 0;
     }
     .first-screen .content-wrapper .right-col {
         display: none;
@@ -529,16 +509,13 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
         margin-bottom: 4rem;
-        margin-top: 1rem;
-        
+        padding-top: 1rem;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
         padding-left: 10%;
-        margin-top: 0.5rem;
-        
+        padding-top: 0.5rem;
     }
     
     .first-screen .contacts-wrapper .contact-container span {
@@ -584,14 +561,9 @@ body {
         font-size: 2rem;
         
     }
-    .first-screen .contacts-wrapper{
-        padding-top: 0;
-        margin-top: .2rem;
-    }
     .first-screen .contacts-wrapper .contact-container {
         padding-left: 3%;
         padding-top: 0;
-        margin-top: .1rem;
     }
     .first-screen .contacts-wrapper .contact-container .contact-icon {
         height: 2.8rem;
