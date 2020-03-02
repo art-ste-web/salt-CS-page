@@ -529,6 +529,7 @@ body {
         margin-bottom: 4rem;
         padding-top: 1rem;
         z-index: 800;
+        min-height: 12rem;
     }
     .first-screen .contacts-wrapper .contact-container {
         z-index: 100;
